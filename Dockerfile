@@ -8,4 +8,8 @@ RUN rm /tmp/install-nginx.sh
 COPY lib /tmp/lib
 RUN bash /tmp/lib/copy-files.sh
 
-RUN chmod +x /verify.sh /start.sh 
+RUN chmod +x /verify.sh /start.sh
+
+RUN apt-get install -y git
+RUN git clone https://github.com/letsencrypt/letsencrypt.git /letsencrypt
+
