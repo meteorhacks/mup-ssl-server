@@ -1,4 +1,4 @@
-set -e 
+set -e
 
 BUILD_DIR=/tmp/nginx
 NGINX_VERSION=1.8.0
@@ -11,6 +11,7 @@ useradd $NGINX_USER || :
 # install dependencies
 apt-get update
 apt-get -y install libpcre3-dev libssl-dev openssl build-essential wget
+apt-get -y --only-upgrade install libssl1.0.0 openssl
 
 # start building process
 
